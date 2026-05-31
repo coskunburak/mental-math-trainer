@@ -251,6 +251,7 @@ function normalizeProgress(progress: GameProgress): GameProgress {
         sprint: normalizeModeStats(progress.analytics.mode.sprint),
         survival: normalizeModeStats(progress.analytics.mode.survival),
         zen: normalizeModeStats(progress.analytics.mode.zen),
+        neuro_fusion: normalizeModeStats(progress.analytics.mode.neuro_fusion),
       },
       questionType: {
         addition: normalizeQuestionTypeStats(progress.analytics.questionType.addition),

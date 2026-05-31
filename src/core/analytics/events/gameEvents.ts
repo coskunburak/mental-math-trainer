@@ -9,4 +9,6 @@ export const gameEvents = {
   dailyChallengeStarted: 'daily_challenge_started',
   dailyChallengeCompleted: 'daily_challenge_completed',
   insightsViewed: 'insights_viewed',
+  themeShowcaseViewed: 'theme_showcase_viewed',
+  themeSelected: 'theme_selected',
 } as const;

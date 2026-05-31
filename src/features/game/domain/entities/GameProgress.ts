@@ -126,6 +126,15 @@ export const DEFAULT_GAME_PROGRESS: GameProgress = {
         totalDurationSeconds: 0,
         totalResponseTimeMs: 0,
       },
+      neuro_fusion: {
+        sessionsPlayed: 0,
+        bestScore: 0,
+        totalScore: 0,
+        totalAnswers: 0,
+        totalCorrectAnswers: 0,
+        totalDurationSeconds: 0,
+        totalResponseTimeMs: 0,
+      },
     },
     questionType: {
       addition: {

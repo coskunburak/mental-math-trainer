@@ -12,10 +12,11 @@ import { Screen } from '@ui/components/layout/Screen';
 interface PremiumScreenProps {
   tier: SubscriptionTier;
   onUpgrade: () => void;
+  onThemeShowcase: () => void;
   onBack: () => void;
 }
 
-export function PremiumScreen({ tier, onUpgrade, onBack }: PremiumScreenProps) {
+export function PremiumScreen({ tier, onUpgrade, onThemeShowcase, onBack }: PremiumScreenProps) {
   const { theme } = useAppTheme();
   const { copy } = useLocalization();
   const styles = useMemo(() => createStyles(theme), [theme]);
@@ -72,6 +73,9 @@ export function PremiumScreen({ tier, onUpgrade, onBack }: PremiumScreenProps) {
         <View style={styles.actions}>
           <PrimaryButton onPress={onUpgrade} disabled={alreadyPremium}>
             {alreadyPremium ? copy.premium.premiumActive : copy.premium.upgradeToPremium}
+          </PrimaryButton>
+          <PrimaryButton onPress={onThemeShowcase} variant="secondary">
+            {copy.premium.themeShowcase}
           </PrimaryButton>
           <PrimaryButton onPress={onBack} variant="secondary">
             {copy.common.back}

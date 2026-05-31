@@ -28,4 +28,10 @@ describe('Unlocks', () => {
     );
     expect(isModeUnlocked(5, 'survival')).toBe(true);
   });
+
+  it('unlocks neuro fusion at level 6', () => {
+    const level6 = computeUnlockState(6);
+    expect(level6.unlockedModes).toContain('neuro_fusion');
+    expect(isModeUnlocked(6, 'neuro_fusion')).toBe(true);
+  });
 });

@@ -1,0 +1,18 @@
+export const neuroPassEvents = {
+  screenView: 'neuro_pass_screen_view',
+  xpGranted: 'neuro_pass_xp_granted',
+  tierReached: 'neuro_pass_tier_reached',
+  purchaseCtaTap: 'neuro_pass_purchase_cta_tap',
+  purchaseCompleted: 'neuro_pass_purchase_completed',
+  retroClaimed: 'neuro_pass_retro_claimed',
+  tierSkipPurchased: 'neuro_pass_tier_skip_purchased',
+  tierSkipUsed: 'neuro_pass_tier_skip_used',
+  questView: 'neuro_pass_quest_view',
+  questProgressed: 'neuro_pass_quest_progressed',
+  questCompleted: 'neuro_pass_quest_completed',
+  questClaimed: 'neuro_pass_quest_claimed',
+  tierClaimed: 'neuro_pass_tier_claimed',
+  timeSuspicious: 'neuro_pass_time_suspicious',
+  spamDetected: 'neuro_pass_spam_detected',
+  replayBlocked: 'neuro_pass_replay_blocked',
+} as const;

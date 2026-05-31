@@ -1,0 +1,642 @@
+{
+  "manifestVersion": 1,
+  "minSupportedVersion": 1,
+  "seasonId": "neuro_pass_s1",
+  "name": "Neuro Pass S1: Pulse Matrix",
+  "startAt": "2026-02-01T00:00:00.000Z",
+  "endAt": "2026-03-01T00:00:00.000Z",
+  "graceEndAt": "2026-03-08T00:00:00.000Z",
+  "tiersTotal": 40,
+  "xpPerTier": 500,
+  "freeTrack": [
+    {
+      "rewardId": "free_skin_token_t1",
+      "rewardType": "metronome_skin",
+      "contentId": "metro_skin_1",
+      "amount": 1,
+      "title": "Metronome Skin 1"
+    },
+    {
+      "rewardId": "free_skin_token_t2",
+      "rewardType": "metronome_skin",
+      "contentId": "metro_skin_2",
+      "amount": 1,
+      "title": "Metronome Skin 2"
+    },
+    {
+      "rewardId": "free_coin_pack_t3",
+      "rewardType": "coins",
+      "contentId": "coin_soft",
+      "amount": 286,
+      "title": "Coins x286"
+    },
+    {
+      "rewardId": "free_skin_token_t4",
+      "rewardType": "metronome_skin",
+      "contentId": "metro_skin_4",
+      "amount": 1,
+      "title": "Metronome Skin 4"
+    },
+    {
+      "rewardId": "free_fragment_bundle_t5",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_common",
+      "amount": 13,
+      "title": "Track Fragments x13"
+    },
+    {
+      "rewardId": "free_coin_pack_t6",
+      "rewardType": "coins",
+      "contentId": "coin_soft",
+      "amount": 322,
+      "title": "Coins x322"
+    },
+    {
+      "rewardId": "free_skin_token_t7",
+      "rewardType": "metronome_skin",
+      "contentId": "metro_skin_1",
+      "amount": 1,
+      "title": "Metronome Skin 1"
+    },
+    {
+      "rewardId": "free_skin_token_t8",
+      "rewardType": "metronome_skin",
+      "contentId": "metro_skin_2",
+      "amount": 1,
+      "title": "Metronome Skin 2"
+    },
+    {
+      "rewardId": "free_coin_pack_t9",
+      "rewardType": "coins",
+      "contentId": "coin_soft",
+      "amount": 358,
+      "title": "Coins x358"
+    },
+    {
+      "rewardId": "free_fragment_bundle_t10",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_common",
+      "amount": 18,
+      "title": "Track Fragments x18"
+    },
+    {
+      "rewardId": "free_skin_token_t11",
+      "rewardType": "metronome_skin",
+      "contentId": "metro_skin_5",
+      "amount": 1,
+      "title": "Metronome Skin 5"
+    },
+    {
+      "rewardId": "free_coin_pack_t12",
+      "rewardType": "coins",
+      "contentId": "coin_soft",
+      "amount": 394,
+      "title": "Coins x394"
+    },
+    {
+      "rewardId": "free_skin_token_t13",
+      "rewardType": "metronome_skin",
+      "contentId": "metro_skin_1",
+      "amount": 1,
+      "title": "Metronome Skin 1"
+    },
+    {
+      "rewardId": "free_skin_token_t14",
+      "rewardType": "metronome_skin",
+      "contentId": "metro_skin_2",
+      "amount": 1,
+      "title": "Metronome Skin 2"
+    },
+    {
+      "rewardId": "free_fragment_bundle_t15",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_common",
+      "amount": 23,
+      "title": "Track Fragments x23"
+    },
+    {
+      "rewardId": "free_skin_token_t16",
+      "rewardType": "metronome_skin",
+      "contentId": "metro_skin_4",
+      "amount": 1,
+      "title": "Metronome Skin 4"
+    },
+    {
+      "rewardId": "free_skin_token_t17",
+      "rewardType": "metronome_skin",
+      "contentId": "metro_skin_5",
+      "amount": 1,
+      "title": "Metronome Skin 5"
+    },
+    {
+      "rewardId": "free_coin_pack_t18",
+      "rewardType": "coins",
+      "contentId": "coin_soft",
+      "amount": 466,
+      "title": "Coins x466"
+    },
+    {
+      "rewardId": "free_skin_token_t19",
+      "rewardType": "metronome_skin",
+      "contentId": "metro_skin_1",
+      "amount": 1,
+      "title": "Metronome Skin 1"
+    },
+    {
+      "rewardId": "free_fragment_bundle_t20",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_common",
+      "amount": 28,
+      "title": "Track Fragments x28"
+    },
+    {
+      "rewardId": "free_coin_pack_t21",
+      "rewardType": "coins",
+      "contentId": "coin_soft",
+      "amount": 502,
+      "title": "Coins x502"
+    },
+    {
+      "rewardId": "free_skin_token_t22",
+      "rewardType": "metronome_skin",
+      "contentId": "metro_skin_4",
+      "amount": 1,
+      "title": "Metronome Skin 4"
+    },
+    {
+      "rewardId": "free_skin_token_t23",
+      "rewardType": "metronome_skin",
+      "contentId": "metro_skin_5",
+      "amount": 1,
+      "title": "Metronome Skin 5"
+    },
+    {
+      "rewardId": "free_coin_pack_t24",
+      "rewardType": "coins",
+      "contentId": "coin_soft",
+      "amount": 538,
+      "title": "Coins x538"
+    },
+    {
+      "rewardId": "free_fragment_bundle_t25",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_common",
+      "amount": 33,
+      "title": "Track Fragments x33"
+    },
+    {
+      "rewardId": "free_skin_token_t26",
+      "rewardType": "metronome_skin",
+      "contentId": "metro_skin_2",
+      "amount": 1,
+      "title": "Metronome Skin 2"
+    },
+    {
+      "rewardId": "free_coin_pack_t27",
+      "rewardType": "coins",
+      "contentId": "coin_soft",
+      "amount": 574,
+      "title": "Coins x574"
+    },
+    {
+      "rewardId": "free_skin_token_t28",
+      "rewardType": "metronome_skin",
+      "contentId": "metro_skin_4",
+      "amount": 1,
+      "title": "Metronome Skin 4"
+    },
+    {
+      "rewardId": "free_skin_token_t29",
+      "rewardType": "metronome_skin",
+      "contentId": "metro_skin_5",
+      "amount": 1,
+      "title": "Metronome Skin 5"
+    },
+    {
+      "rewardId": "free_fragment_bundle_t30",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_common",
+      "amount": 38,
+      "title": "Track Fragments x38"
+    },
+    {
+      "rewardId": "free_skin_token_t31",
+      "rewardType": "metronome_skin",
+      "contentId": "metro_skin_1",
+      "amount": 1,
+      "title": "Metronome Skin 1"
+    },
+    {
+      "rewardId": "free_skin_token_t32",
+      "rewardType": "metronome_skin",
+      "contentId": "metro_skin_2",
+      "amount": 1,
+      "title": "Metronome Skin 2"
+    },
+    {
+      "rewardId": "free_coin_pack_t33",
+      "rewardType": "coins",
+      "contentId": "coin_soft",
+      "amount": 646,
+      "title": "Coins x646"
+    },
+    {
+      "rewardId": "free_skin_token_t34",
+      "rewardType": "metronome_skin",
+      "contentId": "metro_skin_4",
+      "amount": 1,
+      "title": "Metronome Skin 4"
+    },
+    {
+      "rewardId": "free_fragment_bundle_t35",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_common",
+      "amount": 43,
+      "title": "Track Fragments x43"
+    },
+    {
+      "rewardId": "free_coin_pack_t36",
+      "rewardType": "coins",
+      "contentId": "coin_soft",
+      "amount": 682,
+      "title": "Coins x682"
+    },
+    {
+      "rewardId": "free_skin_token_t37",
+      "rewardType": "metronome_skin",
+      "contentId": "metro_skin_1",
+      "amount": 1,
+      "title": "Metronome Skin 1"
+    },
+    {
+      "rewardId": "free_skin_token_t38",
+      "rewardType": "metronome_skin",
+      "contentId": "metro_skin_2",
+      "amount": 1,
+      "title": "Metronome Skin 2"
+    },
+    {
+      "rewardId": "free_coin_pack_t39",
+      "rewardType": "coins",
+      "contentId": "coin_soft",
+      "amount": 718,
+      "title": "Coins x718"
+    },
+    {
+      "rewardId": "free_fragment_bundle_t40",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_common",
+      "amount": 48,
+      "title": "Track Fragments x48"
+    }
+  ],
+  "premiumTrack": [
+    {
+      "rewardId": "premium_fragment_pack_t1",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_premium",
+      "amount": 21,
+      "title": "Premium Fragments x21"
+    },
+    {
+      "rewardId": "premium_fragment_pack_t2",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_premium",
+      "amount": 22,
+      "title": "Premium Fragments x22"
+    },
+    {
+      "rewardId": "premium_fragment_pack_t3",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_premium",
+      "amount": 23,
+      "title": "Premium Fragments x23"
+    },
+    {
+      "rewardId": "premium_puzzle_pack_t4",
+      "rewardType": "puzzle_pack",
+      "contentId": "puzzle_pack_2",
+      "amount": 1,
+      "title": "Puzzle Pack 2"
+    },
+    {
+      "rewardId": "premium_music_track_t5",
+      "rewardType": "music_track",
+      "contentId": "nf_track_orbit",
+      "amount": 1,
+      "title": "Music Track: Orbit Pulse"
+    },
+    {
+      "rewardId": "premium_music_track_t6",
+      "rewardType": "music_track",
+      "contentId": "nf_track_2",
+      "amount": 1,
+      "title": "Music Track 2"
+    },
+    {
+      "rewardId": "premium_fragment_pack_t7",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_premium",
+      "amount": 27,
+      "title": "Premium Fragments x27"
+    },
+    {
+      "rewardId": "premium_puzzle_pack_t8",
+      "rewardType": "puzzle_pack",
+      "contentId": "puzzle_pack_3",
+      "amount": 1,
+      "title": "Puzzle Pack 3"
+    },
+    {
+      "rewardId": "premium_fragment_pack_t9",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_premium",
+      "amount": 29,
+      "title": "Premium Fragments x29"
+    },
+    {
+      "rewardId": "premium_puzzle_pack_t10",
+      "rewardType": "puzzle_pack",
+      "contentId": "puzzle_pack_sigma",
+      "amount": 1,
+      "title": "Puzzle Pack: Sigma"
+    },
+    {
+      "rewardId": "premium_fragment_pack_t11",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_premium",
+      "amount": 31,
+      "title": "Premium Fragments x31"
+    },
+    {
+      "rewardId": "premium_puzzle_pack_t12",
+      "rewardType": "puzzle_pack",
+      "contentId": "puzzle_pack_4",
+      "amount": 1,
+      "title": "Puzzle Pack 4"
+    },
+    {
+      "rewardId": "premium_fragment_pack_t13",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_premium",
+      "amount": 33,
+      "title": "Premium Fragments x33"
+    },
+    {
+      "rewardId": "premium_fragment_pack_t14",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_premium",
+      "amount": 34,
+      "title": "Premium Fragments x34"
+    },
+    {
+      "rewardId": "premium_fragment_pack_t15",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_premium",
+      "amount": 35,
+      "title": "Premium Fragments x35"
+    },
+    {
+      "rewardId": "premium_puzzle_pack_t16",
+      "rewardType": "puzzle_pack",
+      "contentId": "puzzle_pack_1",
+      "amount": 1,
+      "title": "Puzzle Pack 1"
+    },
+    {
+      "rewardId": "premium_fragment_pack_t17",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_premium",
+      "amount": 37,
+      "title": "Premium Fragments x37"
+    },
+    {
+      "rewardId": "premium_music_track_t18",
+      "rewardType": "music_track",
+      "contentId": "nf_track_1",
+      "amount": 1,
+      "title": "Music Track 1"
+    },
+    {
+      "rewardId": "premium_fragment_pack_t19",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_premium",
+      "amount": 39,
+      "title": "Premium Fragments x39"
+    },
+    {
+      "rewardId": "premium_boss_theme_t20",
+      "rewardType": "boss_theme",
+      "contentId": "boss_theme_neon_storm",
+      "amount": 1,
+      "title": "Boss Theme: Neon Storm"
+    },
+    {
+      "rewardId": "premium_fragment_pack_t21",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_premium",
+      "amount": 41,
+      "title": "Premium Fragments x41"
+    },
+    {
+      "rewardId": "premium_fragment_pack_t22",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_premium",
+      "amount": 42,
+      "title": "Premium Fragments x42"
+    },
+    {
+      "rewardId": "premium_fragment_pack_t23",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_premium",
+      "amount": 43,
+      "title": "Premium Fragments x43"
+    },
+    {
+      "rewardId": "premium_puzzle_pack_t24",
+      "rewardType": "puzzle_pack",
+      "contentId": "puzzle_pack_3",
+      "amount": 1,
+      "title": "Puzzle Pack 3"
+    },
+    {
+      "rewardId": "premium_fragment_pack_t25",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_premium",
+      "amount": 45,
+      "title": "Premium Fragments x45"
+    },
+    {
+      "rewardId": "premium_fragment_pack_t26",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_premium",
+      "amount": 46,
+      "title": "Premium Fragments x46"
+    },
+    {
+      "rewardId": "premium_fragment_pack_t27",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_premium",
+      "amount": 47,
+      "title": "Premium Fragments x47"
+    },
+    {
+      "rewardId": "premium_puzzle_pack_t28",
+      "rewardType": "puzzle_pack",
+      "contentId": "puzzle_pack_4",
+      "amount": 1,
+      "title": "Puzzle Pack 4"
+    },
+    {
+      "rewardId": "premium_fragment_pack_t29",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_premium",
+      "amount": 49,
+      "title": "Premium Fragments x49"
+    },
+    {
+      "rewardId": "premium_profile_frame_t30",
+      "rewardType": "profile_frame",
+      "contentId": "frame_quantum",
+      "amount": 1,
+      "title": "Profile Frame: Quantum"
+    },
+    {
+      "rewardId": "premium_fragment_pack_t31",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_premium",
+      "amount": 51,
+      "title": "Premium Fragments x51"
+    },
+    {
+      "rewardId": "premium_puzzle_pack_t32",
+      "rewardType": "puzzle_pack",
+      "contentId": "puzzle_pack_1",
+      "amount": 1,
+      "title": "Puzzle Pack 1"
+    },
+    {
+      "rewardId": "premium_fragment_pack_t33",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_premium",
+      "amount": 53,
+      "title": "Premium Fragments x53"
+    },
+    {
+      "rewardId": "premium_fragment_pack_t34",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_premium",
+      "amount": 54,
+      "title": "Premium Fragments x54"
+    },
+    {
+      "rewardId": "premium_fragment_pack_t35",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_premium",
+      "amount": 55,
+      "title": "Premium Fragments x55"
+    },
+    {
+      "rewardId": "premium_puzzle_pack_t36",
+      "rewardType": "puzzle_pack",
+      "contentId": "puzzle_pack_2",
+      "amount": 1,
+      "title": "Puzzle Pack 2"
+    },
+    {
+      "rewardId": "premium_fragment_pack_t37",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_premium",
+      "amount": 57,
+      "title": "Premium Fragments x57"
+    },
+    {
+      "rewardId": "premium_fragment_pack_t38",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_premium",
+      "amount": 58,
+      "title": "Premium Fragments x58"
+    },
+    {
+      "rewardId": "premium_fragment_pack_t39",
+      "rewardType": "track_fragment",
+      "contentId": "fragment_premium",
+      "amount": 59,
+      "title": "Premium Fragments x59"
+    },
+    {
+      "rewardId": "premium_badge_t40",
+      "rewardType": "badge",
+      "contentId": "badge_s1_animated",
+      "amount": 1,
+      "title": "Animated Badge: S1 Master"
+    }
+  ],
+  "milestones": {
+    "featuredTiers": [
+      {
+        "tier": 5,
+        "label": "First Track Unlock",
+        "rewardId": "premium_music_track_t5"
+      },
+      {
+        "tier": 10,
+        "label": "Puzzle Expansion",
+        "rewardId": "premium_puzzle_pack_t10"
+      },
+      {
+        "tier": 20,
+        "label": "Boss Visual Theme",
+        "rewardId": "premium_boss_theme_t20"
+      },
+      {
+        "tier": 30,
+        "label": "Identity Reward",
+        "rewardId": "premium_profile_frame_t30"
+      },
+      {
+        "tier": 40,
+        "label": "Season Prestige",
+        "rewardId": "premium_badge_t40"
+      }
+    ]
+  },
+  "sku": {
+    "standardSku": "neuro_pass_s1_standard",
+    "plusSku": "neuro_pass_s1_plus",
+    "tierSkipSku5": "neuro_pass_tier_skip_5",
+    "catchUpBundleSku": "neuro_pass_s1_catchup_bundle"
+  },
+  "content": {
+    "musicTrackIds": [
+      "nf_track_orbit",
+      "nf_track_1",
+      "nf_track_2",
+      "nf_track_3"
+    ],
+    "puzzlePackIds": [
+      "puzzle_pack_sigma",
+      "puzzle_pack_1",
+      "puzzle_pack_2",
+      "puzzle_pack_3",
+      "puzzle_pack_4"
+    ],
+    "bossThemeIds": [
+      "boss_theme_neon_storm"
+    ],
+    "badgeIds": [
+      "badge_s1_animated"
+    ],
+    "metronomeSkinIds": [
+      "metro_skin_1",
+      "metro_skin_2",
+      "metro_skin_3",
+      "metro_skin_4",
+      "metro_skin_5",
+      "metro_skin_6"
+    ],
+    "profileFrameIds": [
+      "frame_quantum"
+    ]
+  }
+}

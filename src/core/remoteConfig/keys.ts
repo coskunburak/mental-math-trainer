@@ -1,0 +1,25 @@
+export const remoteConfigKeys = {
+  neuroFusionBpmMin: 'neurofusion_bpm_min',
+  neuroFusionBpmMax: 'neurofusion_bpm_max',
+  neuroFusionBeatWindows: 'neurofusion_beat_windows',
+  neuroFusionBeatsPerQuestion: 'neurofusion_beats_per_question',
+  neuroFusionPhaseDurations: 'neurofusion_phase_durations',
+  neuroFusionScoringWeights: 'neurofusion_scoring_weights',
+  neuroFusionFlowTuning: 'neurofusion_flow_tuning',
+  neuroFusionPunishment: 'neurofusion_punishment',
+  neuroFusionPuzzleMix: 'neurofusion_puzzle_mix',
+  neuroFusionMemoryRange: 'neurofusion_memory_steps',
+  neuroFusionReactionWindow: 'neurofusion_reaction_window',
+  neuroPassManifestEnabled: 'neuro_pass_manifest_enabled',
+  neuroPassManifestJson: 'neuro_pass_manifest_json',
+  neuroPassSoftCapThreshold: 'np_soft_cap_threshold',
+  neuroPassHardCapThreshold: 'np_hard_cap_threshold',
+  neuroPassSoftCapMultiplier: 'np_soft_cap_multiplier',
+  neuroPassRhythmBonusWeight: 'np_rhythm_bonus_weight',
+  neuroPassComboBonusWeight: 'np_combo_bonus_weight',
+  neuroPassAntiSpamScale: 'np_anti_spam_scale',
+  neuroPassManifestOverrideVersion: 'np_manifest_override_version',
+  neuroPassManifestOverrideKey: 'np_manifest_override_key',
+} as const;
+
+export type RemoteConfigKey = (typeof remoteConfigKeys)[keyof typeof remoteConfigKeys];

@@ -6,4 +6,5 @@ export const purchaseEvents = {
   rewardedAdRequested: 'rewarded_ad_requested',
   rewardedAdCompleted: 'rewarded_ad_completed',
   rewardedAdFailed: 'rewarded_ad_failed',
+  themeUpsellPressed: 'theme_upsell_pressed',
 } as const;

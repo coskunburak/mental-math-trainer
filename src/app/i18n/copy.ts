@@ -1,6 +1,14 @@
 import type { GameMode } from '@features/game/domain/entities/GameMode';
 import type { SessionFinishReason } from '@features/game/domain/entities/ProgressModels';
 import type { QuestionType } from '@features/game/domain/entities/Question';
+import {
+  enNeuroFusionCopy,
+  enNeuroPassCopy,
+  trNeuroFusionCopy,
+  trNeuroPassCopy,
+  type NeuroFusionCopy,
+  type NeuroPassCopy,
+} from './featureCopy';
 
 export type AppLanguage = 'en' | 'tr';
 
@@ -21,8 +29,11 @@ export interface AppCopy {
   controls: {
     light: string;
     dark: string;
+    auto: string;
     english: string;
     turkish: string;
+    lockedThemesHint: (lockedThemeCount: number, premiumLockHint: string) => string;
+    lockedPremiumThemeHint: (themeName: string) => string;
   };
   labels: {
     mode: Record<GameMode, string>;
@@ -40,6 +51,8 @@ export interface AppCopy {
     bestScore: string;
     dailyClears: string;
     dailyBest: string;
+    coinsEarned: (coins: number) => string;
+    coinsTotal: (coins: number) => string;
     plan: (isPremium: boolean) => string;
     modeSummary: (modeLabel: string, durationLabel: string) => string;
     modeDurationWithLimit: (durationSeconds: number, questionLimit: number) => string;
@@ -49,22 +62,26 @@ export interface AppCopy {
     unlockLevel: (level: number) => string;
     dailySet: string;
     customSet: string;
+    neuroFusionSet: string;
     ready: string;
     selected: (value: string) => string;
     dailyCompletedHint: string;
     dailyTarget: (questionLimit: number) => string;
     customHint: (durationSeconds: number, questionLimit: number) => string;
+    neuroFusionHint: string;
     completedToday: string;
     startMode: (modeLabel: string) => string;
     openInsights: string;
     managePremium: string;
     goPremium: string;
+    themeShowcase: string;
     editCustomTraining: string;
     customTraining: string;
     recentRuns: string;
     recentRunsEmpty: string;
     recentRunTitle: (index: number, modeLabel: string, score: number) => string;
     recentRunMeta: (accuracy: number, combo: number) => string;
+    flagshipTag: string;
   };
   game: {
     calibrating: string;
@@ -111,6 +128,37 @@ export interface AppCopy {
     premiumActive: string;
     free: string;
     upgradeToPremium: string;
+    themeShowcase: string;
+  };
+  themeShowcase: {
+    kicker: string;
+    title: string;
+    subtitle: string;
+    unlockedThemes: (unlocked: number, total: number) => string;
+    activeTheme: (name: string) => string;
+    selectTheme: string;
+    selectedTheme: string;
+    lockedReason: string;
+    unlockPremium: string;
+    emotionalFeel: string;
+    animationBehavior: string;
+    targetPersona: string;
+    tagline: string;
+    appStoreConcept: string;
+    instagramStory: string;
+    beforeAfter: string;
+    adCopy: string;
+    visualSystem: string;
+    audioSystem: string;
+    marketingAssets: string;
+    category: {
+      all: string;
+      free: string;
+      premium: string;
+      seasonal: string;
+      limited: string;
+      collab: string;
+    };
   };
   customTraining: {
     kicker: string;
@@ -145,6 +193,8 @@ export interface AppCopy {
     watchAdAndClaim: string;
     runAgain: string;
   };
+  neuroFusion: NeuroFusionCopy;
+  neuroPass: NeuroPassCopy;
 }
 
 const en: AppCopy = {
@@ -164,8 +214,12 @@ const en: AppCopy = {
   controls: {
     light: 'Light',
     dark: 'Dark',
+    auto: 'Auto',
     english: 'EN',
     turkish: 'TR',
+    lockedThemesHint: (lockedThemeCount, premiumLockHint) =>
+      `${lockedThemeCount} themes locked. ${premiumLockHint}`,
+    lockedPremiumThemeHint: (themeName) => `${themeName}: Premium subscription required`,
   },
   labels: {
     mode: {
@@ -174,6 +228,7 @@ const en: AppCopy = {
       sprint: 'Sprint',
       survival: 'Survival',
       zen: 'Zen',
+      neuro_fusion: 'Neuro Fusion',
     },
     questionType: {
       addition: 'Addition',
@@ -205,32 +260,41 @@ const en: AppCopy = {
     bestScore: 'Best Score',
     dailyClears: 'Daily Clears',
     dailyBest: 'Daily Best',
+    coinsEarned: (coins) => `+${coins}`,
+    coinsTotal: (coins) => `Coins ${coins}`,
     plan: (isPremium) => `Plan: ${isPremium ? 'Premium' : 'Free'}`,
     modeSummary: (modeLabel, durationLabel) => `Mode: ${modeLabel} / ${durationLabel}`,
-    modeDurationWithLimit: (durationSeconds, questionLimit) => `${durationSeconds}s / ${questionLimit}Q`,
+    modeDurationWithLimit: (durationSeconds, questionLimit) =>
+      `${durationSeconds}s / ${questionLimit}Q`,
     modeDurationTimed: (durationSeconds) => `${durationSeconds}s`,
     modeTitle: 'Mode',
     operationsTitle: 'Operations',
     unlockLevel: (level) => `Unlock L${level}`,
     dailySet: 'Daily Set',
     customSet: 'Custom Set',
+    neuroFusionSet: 'Neuro Fusion Set',
     ready: 'Ready',
     selected: (value) => `Selected: ${value}`,
     dailyCompletedHint: 'Daily Challenge completed for today. Come back tomorrow for a new set.',
-    dailyTarget: (questionLimit) => `Daily target: ${questionLimit} fixed questions before time expires.`,
+    dailyTarget: (questionLimit) =>
+      `Daily target: ${questionLimit} fixed questions before time expires.`,
     customHint: (durationSeconds, questionLimit) =>
       `Custom set: ${durationSeconds}s, ${questionLimit} questions. Edit in Custom Training.`,
+    neuroFusionHint:
+      'Neuro Fusion uses rhythm + puzzle + cognition phases. Configure BPM and preset in mode setup.',
     completedToday: 'Completed Today',
     startMode: (modeLabel) => `Start ${modeLabel}`,
     openInsights: 'Open Insights',
     managePremium: 'Manage Premium',
     goPremium: 'Go Premium',
+    themeShowcase: 'Theme Showcase',
     editCustomTraining: 'Edit Custom Training',
     customTraining: 'Custom Training',
     recentRuns: 'Recent Runs',
     recentRunsEmpty: 'No runs yet. Complete your first session to start tracking history.',
     recentRunTitle: (index, modeLabel, score) => `#${index} ${modeLabel} · Score ${score}`,
     recentRunMeta: (accuracy, combo) => `${accuracy}% / combo ${combo}`,
+    flagshipTag: 'Flagship',
   },
   game: {
     calibrating: 'Calibrating challenge...',
@@ -249,6 +313,7 @@ const en: AppCopy = {
       sprint: 'Math Flow',
       survival: 'No-Miss Run',
       zen: 'Calm Focus',
+      neuro_fusion: 'Neuro Fusion',
     },
     modeFooter: {
       custom: 'Custom run. Keep focus and clear your configured question set.',
@@ -256,6 +321,8 @@ const en: AppCopy = {
       sprint: 'Build a streak. Difficulty adapts in real time to your performance.',
       survival: 'One mistake ends the run. Prioritize accuracy under pressure.',
       zen: 'No timer. Practice consistency and let adaptive difficulty shape the pace.',
+      neuro_fusion:
+        'Music-driven math + puzzles + cognition in one addictive run. Keep flow high for max rewards.',
     },
     difficultyBadge: (difficulty) => `Difficulty ${difficulty}`,
     answerPlaceholder: '...',
@@ -289,6 +356,38 @@ const en: AppCopy = {
     premiumActive: 'Premium Active',
     free: 'Free',
     upgradeToPremium: 'Upgrade to Premium',
+    themeShowcase: 'Explore Theme Showcase',
+  },
+  themeShowcase: {
+    kicker: 'PREMIUM VISUAL SYSTEM',
+    title: 'Theme Showcase',
+    subtitle:
+      'High-converting visual packs optimized for App Store creatives, paid ads, and premium subscriptions.',
+    unlockedThemes: (unlocked, total) => `Unlocked Themes: ${unlocked}/${total}`,
+    activeTheme: (name) => `Active Theme: ${name}`,
+    selectTheme: 'Apply Theme',
+    selectedTheme: 'Theme Active',
+    lockedReason: 'Unlock Rule',
+    unlockPremium: 'Unlock with Premium',
+    emotionalFeel: 'Emotional Feel',
+    animationBehavior: 'Animation Behavior',
+    targetPersona: 'Target Persona',
+    tagline: 'Tagline',
+    appStoreConcept: 'App Store Shot',
+    instagramStory: 'Instagram Story',
+    beforeAfter: 'Before / After',
+    adCopy: 'Sample Ad Copy',
+    visualSystem: 'Visual System',
+    audioSystem: 'Audio + FX',
+    marketingAssets: 'Marketing Assets',
+    category: {
+      all: 'All',
+      free: 'Free',
+      premium: 'Premium',
+      seasonal: 'Seasonal',
+      limited: 'Limited',
+      collab: 'Collab',
+    },
   },
   customTraining: {
     kicker: 'SPRINT 8 CUSTOM',
@@ -323,6 +422,8 @@ const en: AppCopy = {
     watchAdAndClaim: 'Watch Ad & Claim',
     runAgain: 'Run Again',
   },
+  neuroFusion: enNeuroFusionCopy,
+  neuroPass: enNeuroPassCopy,
 };
 
 const tr: AppCopy = {
@@ -342,8 +443,12 @@ const tr: AppCopy = {
   controls: {
     light: 'Açık',
     dark: 'Koyu',
+    auto: 'Oto',
     english: 'EN',
     turkish: 'TR',
+    lockedThemesHint: (lockedThemeCount, premiumLockHint) =>
+      `${lockedThemeCount} tema kilitli. ${premiumLockHint}`,
+    lockedPremiumThemeHint: (themeName) => `${themeName}: Premium abonelik gerekli`,
   },
   labels: {
     mode: {
@@ -352,6 +457,7 @@ const tr: AppCopy = {
       sprint: 'Sprint',
       survival: 'Hayatta Kal',
       zen: 'Zen',
+      neuro_fusion: 'Neuro Fusion',
     },
     questionType: {
       addition: 'Toplama',
@@ -383,32 +489,41 @@ const tr: AppCopy = {
     bestScore: 'En İyi Skor',
     dailyClears: 'Günlük Tamamlama',
     dailyBest: 'Günlük En İyi',
+    coinsEarned: (coins) => `+${coins}`,
+    coinsTotal: (coins) => `Jeton ${coins}`,
     plan: (isPremium) => `Plan: ${isPremium ? 'Premium' : 'Ücretsiz'}`,
     modeSummary: (modeLabel, durationLabel) => `Mod: ${modeLabel} / ${durationLabel}`,
-    modeDurationWithLimit: (durationSeconds, questionLimit) => `${durationSeconds} sn / ${questionLimit} soru`,
+    modeDurationWithLimit: (durationSeconds, questionLimit) =>
+      `${durationSeconds} sn / ${questionLimit} soru`,
     modeDurationTimed: (durationSeconds) => `${durationSeconds} sn`,
     modeTitle: 'Mod',
     operationsTitle: 'İşlemler',
     unlockLevel: (level) => `S${level} seviyede açılır`,
     dailySet: 'Günlük Set',
     customSet: 'Özel Set',
+    neuroFusionSet: 'Neuro Fusion Seti',
     ready: 'Hazır',
     selected: (value) => `Seçili: ${value}`,
     dailyCompletedHint: 'Bugünün günlük görevi tamamlandı. Yeni set için yarın tekrar gel.',
-    dailyTarget: (questionLimit) => `Günlük hedef: süre bitmeden ${questionLimit} sabit soruyu tamamla.`,
+    dailyTarget: (questionLimit) =>
+      `Günlük hedef: süre bitmeden ${questionLimit} sabit soruyu tamamla.`,
     customHint: (durationSeconds, questionLimit) =>
       `Özel set: ${durationSeconds} sn, ${questionLimit} soru. Özel Antrenman ekranından düzenleyebilirsin.`,
+    neuroFusionHint:
+      'Neuro Fusion ritim + bulmaca + bilişsel fazlar içerir. BPM ve preset ayarlarını mod ekranından yap.',
     completedToday: 'Bugün Tamamlandı',
     startMode: (modeLabel) => `${modeLabel} Başlat`,
     openInsights: 'İçgörüleri Aç',
     managePremium: 'Premium Yönet',
     goPremium: 'Premium Ol',
+    themeShowcase: 'Tema Vitrini',
     editCustomTraining: 'Özel Antrenmanı Düzenle',
     customTraining: 'Özel Antrenman',
     recentRuns: 'Son Koşular',
     recentRunsEmpty: 'Henüz koşu yok. Geçmişi başlatmak için ilk oturumu tamamla.',
     recentRunTitle: (index, modeLabel, score) => `#${index} ${modeLabel} · Skor ${score}`,
     recentRunMeta: (accuracy, combo) => `%${accuracy} / kombo ${combo}`,
+    flagshipTag: 'Öne Çıkan',
   },
   game: {
     calibrating: 'Meydan okuma hazırlanıyor...',
@@ -427,6 +542,7 @@ const tr: AppCopy = {
       sprint: 'Matematik Akışı',
       survival: 'Hatasız Koşu',
       zen: 'Sakin Odak',
+      neuro_fusion: 'Neuro Fusion',
     },
     modeFooter: {
       custom: 'Özel koşu. Odağını koru ve ayarladığın soru setini tamamla.',
@@ -434,6 +550,8 @@ const tr: AppCopy = {
       sprint: 'Seri kur. Zorluk gerçek zamanda performansına göre uyarlanır.',
       survival: 'Tek hata koşuyu bitirir. Baskı altında doğruluğa odaklan.',
       zen: 'Süre yok. Tutarlılık çalış ve tempoyu adaptif zorluk belirlesin.',
+      neuro_fusion:
+        'Müzik odaklı matematik + bulmaca + biliş bir arada. Yüksek ödül için flow seviyeni koru.',
     },
     difficultyBadge: (difficulty) => `Zorluk ${difficulty}`,
     answerPlaceholder: '...',
@@ -467,6 +585,38 @@ const tr: AppCopy = {
     premiumActive: 'Premium Aktif',
     free: 'Ücretsiz',
     upgradeToPremium: 'Premiuma Yükselt',
+    themeShowcase: 'Tema Vitrinini Keşfet',
+  },
+  themeShowcase: {
+    kicker: 'PREMIUM GÖRSEL SİSTEM',
+    title: 'Tema Vitrini',
+    subtitle:
+      'App Store görselleri, performans reklamları ve premium dönüşümü için optimize edilmiş yüksek etki temalar.',
+    unlockedThemes: (unlocked, total) => `Açılan Temalar: ${unlocked}/${total}`,
+    activeTheme: (name) => `Aktif Tema: ${name}`,
+    selectTheme: 'Temayı Uygula',
+    selectedTheme: 'Tema Aktif',
+    lockedReason: 'Açılma Kuralı',
+    unlockPremium: 'Premium ile Aç',
+    emotionalFeel: 'Duygusal Etki',
+    animationBehavior: 'Animasyon Davranışı',
+    targetPersona: 'Hedef Persona',
+    tagline: 'Slogan',
+    appStoreConcept: 'App Store Görseli',
+    instagramStory: 'Instagram Story',
+    beforeAfter: 'Önce / Sonra',
+    adCopy: 'Reklam Metni',
+    visualSystem: 'Görsel Sistem',
+    audioSystem: 'Ses + Efekt',
+    marketingAssets: 'Pazarlama İçeriği',
+    category: {
+      all: 'Tümü',
+      free: 'Ücretsiz',
+      premium: 'Premium',
+      seasonal: 'Sezonluk',
+      limited: 'Sınırlı',
+      collab: 'İş Birliği',
+    },
   },
   customTraining: {
     kicker: 'SPRINT 8 ÖZEL',
@@ -501,6 +651,8 @@ const tr: AppCopy = {
     watchAdAndClaim: 'Reklam İzle ve Al',
     runAgain: 'Tekrar Koş',
   },
+  neuroFusion: trNeuroFusionCopy,
+  neuroPass: trNeuroPassCopy,
 };
 
 export const copyByLanguage: Record<AppLanguage, AppCopy> = {

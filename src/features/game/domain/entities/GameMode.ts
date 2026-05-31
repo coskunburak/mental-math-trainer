@@ -1,4 +1,4 @@
-export type GameMode = 'custom' | 'daily' | 'sprint' | 'survival' | 'zen';
+export type GameMode = 'custom' | 'daily' | 'sprint' | 'survival' | 'zen' | 'neuro_fusion';
 
 export const gameModeLabels: Record<GameMode, string> = {
   custom: 'Custom',
@@ -6,6 +6,7 @@ export const gameModeLabels: Record<GameMode, string> = {
   sprint: 'Sprint',
   survival: 'Survival',
   zen: 'Zen',
+  neuro_fusion: 'Neuro Fusion',
 };
 
 export interface GameModePolicy {
@@ -47,6 +48,12 @@ export const GAME_MODE_POLICIES: Record<GameMode, GameModePolicy> = {
     mode: 'zen',
     timed: false,
     defaultDurationSeconds: 0,
+    endsOnMistake: false,
+  },
+  neuro_fusion: {
+    mode: 'neuro_fusion',
+    timed: true,
+    defaultDurationSeconds: 180,
     endsOnMistake: false,
   },
 };

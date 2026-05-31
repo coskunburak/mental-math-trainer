@@ -17,6 +17,9 @@ export function computeUnlockState(level: number): UnlockState {
   if (safeLevel >= 4) {
     unlockedModes.push('survival');
   }
+  if (safeLevel >= 6) {
+    unlockedModes.push('neuro_fusion');
+  }
 
   const unlockedQuestionTypes: QuestionType[] = ['addition', 'subtraction'];
   if (safeLevel >= 3) {

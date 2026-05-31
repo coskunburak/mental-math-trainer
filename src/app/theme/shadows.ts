@@ -1,13 +1,17 @@
+import type { HudStyle } from '@features/theme/domain/entities/GameTheme';
+
 type ThemeMode = 'light' | 'dark';
 
-export function createShadows(mode: ThemeMode) {
+export function createShadows(mode: ThemeMode, shadowColor: string, hudStyle: HudStyle) {
   const isDark = mode === 'dark';
+  const neonBoost = hudStyle === 'neon' ? 1.2 : 1;
+  const glassSoftness = hudStyle === 'glass' ? 1.18 : 1;
 
   return {
     card: {
-      shadowColor: '#000000',
-      shadowOpacity: isDark ? 0.36 : 0.16,
-      shadowRadius: isDark ? 22 : 14,
+      shadowColor,
+      shadowOpacity: (isDark ? 0.38 : 0.16) * glassSoftness,
+      shadowRadius: (isDark ? 20 : 14) * neonBoost,
       shadowOffset: {
         width: 0,
         height: isDark ? 10 : 8,
@@ -15,9 +19,9 @@ export function createShadows(mode: ThemeMode) {
       elevation: isDark ? 6 : 4,
     },
     button: {
-      shadowColor: '#000000',
-      shadowOpacity: isDark ? 0.28 : 0.2,
-      shadowRadius: 12,
+      shadowColor,
+      shadowOpacity: (isDark ? 0.3 : 0.2) * neonBoost,
+      shadowRadius: (12 + (hudStyle === 'neon' ? 4 : 0)) * neonBoost,
       shadowOffset: {
         width: 0,
         height: 6,
