@@ -6,6 +6,22 @@ Mental Math Trainer is an Expo + React Native mobile app that turns mental arith
 
 The goal is to go beyond a basic four-operation math game. Mental Math Trainer shows users how much they improve after each run, tracks strong and weak areas, adds motivation through a premium theme and reward economy, and introduces an advanced Neuro Fusion mode that combines math with rhythm, memory, and puzzle pressure.
 
+## App Preview
+
+<p align="center">
+  <img src="assets/IMG_7634.PNG" width="180" alt="Mental Math Trainer screenshot 1" />
+  <img src="assets/IMG_7635.PNG" width="180" alt="Mental Math Trainer screenshot 2" />
+  <img src="assets/IMG_7636.PNG" width="180" alt="Mental Math Trainer screenshot 3" />
+  <img src="assets/IMG_7637.PNG" width="180" alt="Mental Math Trainer screenshot 4" />
+  <img src="assets/IMG_7638.PNG" width="180" alt="Mental Math Trainer screenshot 5" />
+  <br />
+  <img src="assets/IMG_7639.PNG" width="180" alt="Mental Math Trainer screenshot 6" />
+  <img src="assets/IMG_7640.PNG" width="180" alt="Mental Math Trainer screenshot 7" />
+  <img src="assets/IMG_7641.PNG" width="180" alt="Mental Math Trainer screenshot 8" />
+  <img src="assets/IMG_7642.PNG" width="180" alt="Mental Math Trainer screenshot 9" />
+  <img src="assets/IMG_7643.PNG" width="180" alt="Mental Math Trainer screenshot 10" />
+</p>
+
 ## Highlights
 
 - **Multiple game modes:** Daily, Sprint, Zen, Survival, Custom Training, and Neuro Fusion.
