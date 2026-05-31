@@ -2,77 +2,77 @@
 
 ![Mental Math Trainer icon](assets/icon.png)
 
-Mental Math Trainer, zihinsel matematiği kısa, ölçülebilir ve tekrar oynanabilir antrenmanlara dönüştüren Expo + React Native tabanlı bir mobil uygulamadır. Uygulama sadece doğru cevabı değil; hız, isabet, seri yakalama, ritim, seviye ilerlemesi ve uzun vadeli alışkanlık metriklerini birlikte değerlendirir.
+Mental Math Trainer is an Expo + React Native mobile app that turns mental arithmetic into short, measurable, and replayable training sessions. The app evaluates more than the final answer: speed, accuracy, combo control, rhythm, level progression, and long-term habit metrics all feed into the player experience.
 
-Projenin hedefi basit bir dört işlem oyununun ötesine geçmek: kullanıcıya her oturumdan sonra ne kadar geliştiğini göstermek, güçlü ve zayıf alanlarını takip etmek, premium tema/ödül ekonomisiyle motivasyonu artırmak ve gelişmiş Neuro Fusion modu ile matematiği ritim, hafıza ve puzzle baskısıyla birleştirmek.
+The goal is to go beyond a basic four-operation math game. Mental Math Trainer shows users how much they improve after each run, tracks strong and weak areas, adds motivation through a premium theme and reward economy, and introduces an advanced Neuro Fusion mode that combines math with rhythm, memory, and puzzle pressure.
 
-## Öne Çıkan Özellikler
+## Highlights
 
-- **Çoklu oyun modları:** Daily, Sprint, Zen, Survival, Custom Training ve Neuro Fusion.
-- **Akıllı soru üretimi:** Toplama, çıkarma, çarpma ve bölme soruları seviye/difficulty değerine göre deterministik seed ile üretilir.
-- **Skor ve combo sistemi:** Doğru cevap, cevap süresi, zorluk seviyesi ve combo çarpanı birlikte puana yansır.
-- **XP, seviye ve seri takibi:** Oyuncu ilerlemesi, günlük tamamlama, en iyi skor, en iyi combo ve son oturum geçmişi saklanır.
-- **Performans analizleri:** Mod ve işlem türü bazında doğruluk, ortalama cevap süresi, toplam oturum ve en iyi skor metrikleri.
-- **Neuro Fusion:** Ritim matematiği, puzzle, hafıza ve refleks fazlarını tek koşuda birleştiren gelişmiş antrenman modu.
-- **Neuro Pass:** Sezon, görev, ödül, premium track, tier skip, coin ve track fragment ekonomisi.
-- **Tema sistemi:** Free, premium, seasonal, limited ve collab kategorileriyle kilit açma kurallarına bağlı 20 temalık yapı.
-- **Premium akışı:** Custom training, advanced insights, sınırsız pratik, tema vitrinleri ve rewarded bonus XP gibi monetization yüzeyleri.
-- **TR/EN lokalizasyon:** Uygulama metinleri Türkçe ve İngilizce kaynaklardan yönetilir.
-- **Test edilebilir domain katmanı:** Skorlama, soru üretimi, difficulty, brain score, Neuro Fusion ve Neuro Pass ekonomisi için Jest testleri bulunur.
+- **Multiple game modes:** Daily, Sprint, Zen, Survival, Custom Training, and Neuro Fusion.
+- **Smart question generation:** Addition, subtraction, multiplication, and division questions are generated with deterministic seeds based on level and difficulty.
+- **Score and combo system:** Correctness, response time, difficulty level, and combo multiplier all contribute to scoring.
+- **XP, levels, and streaks:** Player progress, daily clears, best score, best combo, and recent session history are persisted.
+- **Performance insights:** Accuracy, average response time, total sessions, and best score are tracked per mode and operation type.
+- **Neuro Fusion:** An advanced training mode that blends rhythm math, puzzles, memory, and reflex phases in a single run.
+- **Neuro Pass:** A season-based progression layer with quests, rewards, premium track, tier skips, coins, and track fragments.
+- **Theme system:** A 20-theme structure with free, premium, seasonal, limited, and collab categories tied to unlock rules.
+- **Premium flow:** Monetization surfaces for custom training, advanced insights, unlimited practice, theme showcases, and rewarded bonus XP.
+- **TR/EN localization:** App copy is managed through Turkish and English language resources.
+- **Testable domain layer:** Jest tests cover scoring, question generation, difficulty, brain score, Neuro Fusion, and Neuro Pass economy logic.
 
-## Oyun Modları
+## Game Modes
 
-| Mod             | Açıklama                                                                  |
-| --------------- | ------------------------------------------------------------------------- |
-| Daily           | Her gün seed tabanlı, sınırlı soru sayılı günlük meydan okuma.            |
-| Sprint          | Kısa sürede maksimum doğru cevap ve skor hedefleyen tempo modu.           |
-| Zen             | Süre baskısı olmadan odaklı pratik.                                       |
-| Survival        | Hata baskısı yüksek, daha rekabetçi koşu tipi.                            |
-| Custom Training | Süre, soru limiti ve işlem türlerini oyuncunun seçtiği premium antrenman. |
-| Neuro Fusion    | Matematik, ritim, puzzle, hafıza ve refleksi birleştiren flagship mod.    |
+| Mode            | Description                                                                   |
+| --------------- | ----------------------------------------------------------------------------- |
+| Daily           | A daily seed-based challenge with a limited number of questions.              |
+| Sprint          | A timed mode focused on answering as many questions as possible.              |
+| Zen             | Untimed practice for focused training without pressure.                       |
+| Survival        | A more competitive run type with stronger mistake pressure.                   |
+| Custom Training | A premium training mode where players choose duration, limit, and operations. |
+| Neuro Fusion    | The flagship mode combining math, rhythm, puzzles, memory, and reflexes.      |
 
 ## Neuro Fusion
 
-Neuro Fusion, klasik mental math akışını daha yoğun bir bilişsel antrenmana çevirir. Koşular BPM ve preset seçimiyle başlar; kullanıcı isterse gecikme kalibrasyonu yapar. Ardından fazlar arasında dönen bir yapı çalışır:
+Neuro Fusion turns the classic mental math loop into a denser cognitive workout. Runs start with BPM and preset selection, with optional latency calibration. The session then rotates through multiple pressure phases:
 
-- **Rhythm Math:** Sorular beat pencerelerinde cevaplanır; perfect/great/good/offbeat ayrımı puanı etkiler.
-- **Puzzle Phase:** Dizi tamamlama, operasyon paterni, grid puzzle, odd one out, denklem dengeleme ve hızlı tahmin tipleri.
-- **Cognitive Blend:** Echo Stack ve Reflex Gate ile hafıza, reaksiyon ve matematik aynı anda ölçülür.
-- **Boss Phase:** Koşunun sonunda daha yoğun karışık mikro meydan okuma.
+- **Rhythm Math:** Questions are answered inside beat windows; perfect, great, good, and offbeat timing affect the score.
+- **Puzzle Phase:** Includes missing sequences, mixed operation patterns, grid puzzles, odd-one-out prompts, equation balancing, and quick estimates.
+- **Cognitive Blend:** Echo Stack and Reflex Gate combine memory, reaction time, and math.
+- **Boss Phase:** A more intense mixed micro-challenge at the end of the run.
 
-Sonuç ekranı skor, grade, doğruluk, ortalama beat offset, flow peak, faz kırılımı, XP, coin, track fragment ve badge ödüllerini gösterir.
+The result screen shows score, grade, accuracy, average beat offset, flow peak, phase breakdown, XP, coins, track fragments, and badge rewards.
 
 ## Neuro Pass
 
-Neuro Pass, oyunu sezon bazlı ilerleme sistemine bağlayan ödül katmanıdır. Oyuncu Neuro Fusion koşularından, görevlerden ve claim akışlarından NXP kazanır; ücretsiz ve premium track üzerinde ödüller açar.
+Neuro Pass connects the game to a season-based reward system. Players earn NXP from Neuro Fusion runs, quests, and claim flows, then unlock rewards across free and premium tracks.
 
-Sistem şu parçaları içerir:
+The system includes:
 
-- Sezon manifest doğrulama ve fallback akışı.
-- Daily/weekly/boss quest yapısı.
-- Idempotent XP grant ve reward claim politikaları.
-- Premium entitlement, restore purchases ve IAP ürün katalogları.
-- Tier skip satın alma/kullanma akışı.
-- Anti-abuse kontrolleri: spam tap, time spoof ve cap politikaları.
-- Backend'e geçiş için repository arayüzleri ve local-first migration planı.
+- Season manifest validation and fallback behavior.
+- Daily, weekly, and boss quest structure.
+- Idempotent XP grant and reward claim policies.
+- Premium entitlement, restore purchases, and IAP product catalog flows.
+- Tier skip purchase and usage logic.
+- Anti-abuse checks for spam tapping, time spoofing, and cap policies.
+- Repository interfaces and a local-first migration plan for a future backend.
 
-## Tema ve Görsel Kimlik
+## Themes and Visual Identity
 
-Tema sistemi runtime'da light, dark ve system modlarıyla çalışır. Her tema; renk paleti, HUD stili, animasyon karakteri, tipografi profili, ses paketi, particle tipi ve unlock kuralı gibi alanlardan oluşur.
+The theme system supports runtime light, dark, and system modes. Each theme defines its palette, HUD style, animation character, typography profile, sound pack, particle type, and unlock rule.
 
-Kategoriler:
+Theme categories:
 
-- Free başlangıç temaları
-- Premium tema setleri
-- Streak/referral ile açılan temalar
-- Seasonal ve limited-time kampanya temaları
-- Tek seferlik satın alma veya abonelikle açılabilen hibrit temalar
+- Free starter themes
+- Premium theme sets
+- Streak and referral unlock themes
+- Seasonal and limited-time campaign themes
+- Hybrid themes unlocked by one-time purchase or subscription
 
-Detaylı tema planı için [docs/theme-system.md](docs/theme-system.md) dosyasına bakabilirsiniz.
+See [docs/theme-system.md](docs/theme-system.md) for the detailed theme plan.
 
-## Teknik Mimari
+## Technical Architecture
 
-Proje feature-first ve domain odaklı bir yapıyla düzenlenmiştir. UI, domain, data ve altyapı katmanları birbirinden ayrılır; bağımlılıklar DI container üzerinden çözülür.
+The project uses a feature-first, domain-oriented structure. UI, domain, data, and infrastructure concerns are separated, and dependencies are resolved through a DI container.
 
 ```text
 src/
@@ -82,32 +82,32 @@ src/
     game/              # Mental math domain, screens, store, scoring, Neuro Fusion
     neuroPass/         # Season pass, quests, rewards, IAP, anti-abuse
     theme/             # Theme catalog, unlock evaluator, preference store
-  ui/                  # Paylaşılan layout, button ve feedback bileşenleri
+  ui/                  # Shared layout, button, and feedback components
 ```
 
-Ana teknik kararlar:
+Key technical choices:
 
 - **Expo 54 + React Native 0.81 + React 19**
 - **TypeScript strict mode**
-- **Jest + ts-jest** ile domain ve store testleri
+- **Jest + ts-jest** for domain and store tests
 - **ESLint + Prettier + Husky + lint-staged**
-- **Path alias'ları:** `@app`, `@core`, `@features`, `@ui`
-- **Repository arayüzleri:** local storage ve backend-ready implementasyonlar için ayrılmış yapı
-- **Analytics sanitization:** event parametreleri PII guard ve sanitizer katmanından geçer
+- **Path aliases:** `@app`, `@core`, `@features`, `@ui`
+- **Repository interfaces:** separated local storage and backend-ready implementations
+- **Analytics sanitization:** event parameters pass through PII guards and sanitizer layers
 
-## Kurulum
+## Installation
 
 ```bash
 npm install
 ```
 
-Geliştirme sunucusunu başlatmak için:
+Start the development server:
 
 ```bash
 npm start
 ```
 
-Platform komutları:
+Platform commands:
 
 ```bash
 npm run ios
@@ -115,7 +115,7 @@ npm run android
 npm run web
 ```
 
-## Kalite Kontrolleri
+## Quality Checks
 
 ```bash
 npm run lint
@@ -124,24 +124,24 @@ npm run typecheck
 npm run ci
 ```
 
-Kod formatlamak için:
+Format the codebase:
 
 ```bash
 npm run format
 ```
 
-## GitHub'a Pushlama
+## Push to GitHub
 
-Bu repo zaten `origin` olarak aşağıdaki GitHub adresine bağlıysa:
+If this repository is already connected to `origin`:
 
 ```bash
 git status
 git add README.md
-git commit -m "docs: add project readme"
+git commit -m "docs: translate readme to english"
 git push origin main
 ```
 
-Tüm mevcut proje değişikliklerini göndermek istiyorsanız:
+If you want to push all current project changes:
 
 ```bash
 git status
@@ -150,7 +150,7 @@ git commit -m "feat: update mental math trainer"
 git push origin main
 ```
 
-Repo sıfırdan bağlanacaksa:
+If you are connecting the repository from scratch:
 
 ```bash
 git init
@@ -161,12 +161,12 @@ git commit -m "Initial commit"
 git push -u origin main
 ```
 
-## Dokümantasyon
+## Documentation
 
 - [Neuro Fusion Design Doc](docs/neuro-fusion-design.md)
 - [Neuro Pass Migration Plan](docs/neuro_pass_migration_plan.md)
 - [Theme System Blueprint](docs/theme-system.md)
 
-## Kısa Özet
+## Summary
 
-Mental Math Trainer; hızlı dört işlem pratiğini, seviye ilerlemesini, kişisel performans analizini, premium tema ekonomisini, sezon bazlı Neuro Pass sistemini ve ritim/puzzle temelli Neuro Fusion modunu tek bir mobil uygulamada birleştirir. Kod tarafında ise test edilebilir domain servisleri, modüler feature yapısı ve backend'e taşınmaya hazır repository sınırlarıyla büyümeye uygun bir React Native mimarisi sunar.
+Mental Math Trainer combines fast arithmetic practice, level progression, personal performance insights, a premium theme economy, a season-based Neuro Pass system, and the rhythm/puzzle-driven Neuro Fusion mode in a single mobile app. On the code side, it provides testable domain services, a modular feature structure, and repository boundaries that are ready for future backend migration.
